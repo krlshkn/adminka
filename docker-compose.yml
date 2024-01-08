@@ -5,8 +5,8 @@ services:
     image: postgres:15.3
     build: ./
     environment:
-      POSTGRES_USER: DBserver
-      POSTGRES_PASSWORD: 1
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
       POSTGRES_DB: Pottery
     ports:
       - "5434:5432"
@@ -14,15 +14,15 @@ services:
       - ./scripts:/docker-entrypoint-initdb.d
 
   app:
-    build: JavaProject/
+    build: back/
     ports:
       - "8080:8080"
     depends_on:
       - postgres
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/Pottery
-      SPRING_DATASOURCE_USERNAME: DBserver
-      SPRING_DATASOURCE_PASSWORD: 1
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
 
   front:
     build: front/

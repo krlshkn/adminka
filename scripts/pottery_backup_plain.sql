@@ -9,38 +9,16 @@
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
 SET check_function_bodies = false;
-SET xmloption = content;
 SET client_min_messages = warning;
-SET row_security = on;
-
-DROP DATABASE IF EXISTS "Pottery";
---
--- TOC entry 3538 (class 1262 OID 24829)
--- Name: Pottery; Type: DATABASE; Schema: -; Owner: postgres
---
-
-CREATE DATABASE "Pottery" WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'Russian_Russia.1251';
 
 
-ALTER DATABASE "Pottery" OWNER TO postgres;
 
-\connect "Pottery"
+SET default_tablespace = '';
 
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = on;
+SET default_with_oids = false;
 
 --
 -- TOC entry 910 (class 1247 OID 25084)
